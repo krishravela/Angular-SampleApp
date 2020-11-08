@@ -14,31 +14,31 @@
         <h4>Filter by:</h4>
       </div>
     </div>
-     <div class="row">
-    <div class="table-responsive" *ngIf="products">
-      <table class="table">
-        <thead>
-          <tr>
-            <th><button class="btn btn-primary">Show image</button></th>
-            <th>Product</th>
-            <th>Code</th>
-            <th>Available</th>
-            <th>Price</th>
-            <th>Rating</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let product of products">
-            <td></td>
-            <td>{{product.productName}}</td>
-            <td>{{product.productCode}}</td>
-            <td>{{product.releaseDate}}</td>
-            <td>{{product.price}}</td>
-            <td>{{product.starRating}}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="row">
+      <div class="table-responsive" *ngIf="products">
+        <table class="table">
+          <thead>
+            <tr>
+              <th><button class="btn btn-primary">Show image</button></th>
+              <th>Product</th>
+              <th>Code</th>
+              <th>Available</th>
+              <th>Price</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td><img [src]="product.imageUrl" class="imageUrl" /></td>
+              <td>{{product.productName}}</td>
+              <td>{{product.productCode}}</td>
+              <td>{{product.releaseDate}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.starRating}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-     </div>
   </div>
 </div>
